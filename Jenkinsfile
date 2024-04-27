@@ -1,13 +1,13 @@
 pipeline{
    agent any
    stages{
-     stage('new'){
+     stage("stage1"){
 	   steps{
 	     sh 'uptime'
 	   }
 	 }
    }
-     stage('new1'){
+     stage("stage2"){
 	   steps{
 	     sh echo "hello world"
 	   }
