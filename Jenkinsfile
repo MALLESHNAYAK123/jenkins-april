@@ -8,9 +8,9 @@ pipeline{
 	  }
 	}
 	stage('deploy'){
-	  step{
+	  steps{
 	    sh "cd /new1/newjenkins/jenkins-april/spring-boot-hello-world/target"
-		sh "java -jar spring-boot-hello-world"
+		sh "java -jar spring-boot-hello-world" &
 	  }
 	}
   }
