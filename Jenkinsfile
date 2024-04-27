@@ -1,6 +1,11 @@
 pipeline{
   agent any
   stages{
+	stage('git checkout'){
+	  steps{
+		git 'https://github.com/MALLESHNAYAK123/jenkins-april.git' 
+	  }
+	  }
     stage('build stage'){
 	  steps{
 		sh 'uptime'
@@ -10,7 +15,7 @@ pipeline{
 	stage('build stage-01'){
 	  steps{
 		script{
-			dir('/var/lib/jenkins/workspace/pipelinedeploy/spring-boot-hello-world'){
+			dir('spring-boot-hello-world'){
 				sh 'pwd'
 				sh 'mvn clean package'
 			}
@@ -19,7 +24,7 @@ pipeline{
 			}
 	stage('deploy'){
 	  steps{
-		sh 'java -jar spring-boot-hello-world/target/*.jar &'
+		sh 'java -jar spring-boot-hello-world/target/*.jar --server.port=8081 &'
 	  }
 	}
   }
