@@ -16,6 +16,11 @@ pipeline{
 	     sh "w"
 	   }
 	 }
+     stage("stage4"){
+	   steps{
+	     sh "free -h"
+	   }
+	 }
  }
  }
 // the end the end
