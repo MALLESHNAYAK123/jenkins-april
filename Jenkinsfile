@@ -1,6 +1,11 @@
 pipeline{
   agent any
   stages{
+	stage('git checkout'){
+	  steps{
+		git 'https://github.com/MALLESHNAYAK123/jenkins-april.git' 
+	  }
+	  }
     stage('build stage'){
 	  steps{
 		sh 'uptime'
@@ -19,7 +24,7 @@ pipeline{
 			}
 	stage('deploy'){
 	  steps{
-		sh 'java -jar target/*.jar &'
+		sh 'java -jar spring-boot-hello-world/target/*.jar &'
 	  }
 	}
   }
