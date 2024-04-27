@@ -11,6 +11,7 @@ pipeline{
 	  steps{
 		scripts{
 			dir('spring-boot-hello-world'){
+				sh 'pwd'
 				sh 'mvn clean package'
 			}
 			}
