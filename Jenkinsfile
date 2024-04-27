@@ -19,7 +19,7 @@ pipeline{
 			}
 	stage('deploy'){
 	  steps{
-		sh 'nohup java -jar spring-boot-hello-world/target/spring-boot-hello-world-1.0.jar --server.port=8081 &'
+		sh 'nohup java -jar /var/lib/jenkins/workspace/pipelinedeploy/spring-boot-hello-world/target/spring-boot-hello-world-1.0.jar --server.port=8081 &'
 	  }
 	}
   }
