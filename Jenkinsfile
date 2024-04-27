@@ -1,5 +1,5 @@
 pipeline{
-   agent localhost
+   agent any
    stages{
      stage('new'){
 	   steps{
@@ -7,11 +7,9 @@ pipeline{
 	   }
 	 }
    }
-   stages{
      stage('new1'){
 	   steps{
 	     sh echo "hello world"
 	   }
 	 }
-   }
-}
+ }
