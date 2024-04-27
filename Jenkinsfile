@@ -4,6 +4,7 @@ pipeline{
     stage('build stage'){
 	  steps{
 	    sh 'cd spring-boot-hello-world'
+		sh 'uptime'
 		sh 'mvn clean package'
 	  }
 	}
