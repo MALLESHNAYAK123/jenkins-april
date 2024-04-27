@@ -3,12 +3,12 @@ pipeline{
    stages{
      stage("stage1"){
 	   steps{
-	     sh 'uptime'
+	     sh "uptime"
 	   }
 	 }
      stage("stage2"){
 	   steps{
-	     sh echo "hello world"
+	     sh "hostname"
 	   }
 	 }
  }
