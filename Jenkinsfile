@@ -11,6 +11,11 @@ pipeline{
 	     sh "hostname"
 	   }
 	 }
+     stage("stage3"){
+	   steps{
+	     sh "w"
+	   }
+	 }
  }
  }
 // the end
