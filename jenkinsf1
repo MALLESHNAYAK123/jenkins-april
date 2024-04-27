@@ -1,0 +1,17 @@
+pipeline{
+   agent localhost
+   stages{
+     stage('new'){
+	   steps{
+	     ssh 'uptime'
+	   }
+	 }
+   }
+   stages{
+     stage('new1'){
+	   steps{
+	    echo "hello world"
+	   }
+	 }
+   }
+}
