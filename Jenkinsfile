@@ -6,11 +6,11 @@ pipeline{
 	     sh 'uptime'
 	   }
 	 }
-   }
      stage("stage2"){
 	   steps{
 	     sh echo "hello world"
 	   }
 	 }
+ }
  }
 // the end
