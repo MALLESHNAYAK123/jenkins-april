@@ -9,7 +9,7 @@ pipeline{
 	  }
 	stage('build stage-01'){
 	  steps{
-		scripts{
+		script{
 			dir('/var/lib/jenkins/workspace/pipelinedeploy/spring-boot-hello-world'){
 				sh 'pwd'
 				sh 'mvn clean package'
