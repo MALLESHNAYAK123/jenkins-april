@@ -5,6 +5,7 @@ pipeline{
 	  steps{
 	    sh 'cd spring-boot-hello-world'
 		sh 'uptime'
+		sh 'pwd'
 		sh 'mvn clean package'
 	  }
 	}
