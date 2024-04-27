@@ -1,11 +1,6 @@
 pipeline{
   agent any
   stages{
-	stage('git checkout'){
-	  steps{
-		git 'https://github.com/MALLESHNAYAK123/jenkins-april.git' 
-	  }
-	  }
     stage('build stage'){
 	  steps{
 		sh 'uptime'
