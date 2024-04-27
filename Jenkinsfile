@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('build stage'){
 	  steps{
-	    sh 'cd spring-boot-hello-world'
+	    sh 'cd /var/lib/jenkins/workspace/pipelinedeploy/spring-boot-hello-world'
 		sh 'uptime'
 		sh 'pwd'
 		sh 'mvn clean package'
@@ -11,7 +11,7 @@ pipeline{
 	}
 	stage('deploy'){
 	  steps{
-		sh 'java -jar spring-boot-hello-world/target/*.jar &'
+		sh 'java -jar target/*.jar &'
 	  }
 	}
   }
