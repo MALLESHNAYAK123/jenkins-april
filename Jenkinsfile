@@ -21,7 +21,7 @@ pipeline{
 	  steps{
 		script{
                 withEnv(['BUILD_ID=dontkill']) {
-		sh 'cd spring-boot-hello-word/target && nohup java -jar spring-boot-hello-world-1.0.jar --server.port=8081 &'
+		sh 'cd target && nohup java -jar spring-boot-hello-world-1.0.jar --server.port=8081 &'
 	  }
 	}
   }
