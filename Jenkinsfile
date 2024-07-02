@@ -21,7 +21,7 @@ pipeline{
 	  steps{
 		script{
                 withEnv(['BUILD_ID=dontkill']) {
-		sh 'nohup java -jar /var/lib/jenkins/workspace/pipelinedeploy/spring-boot-hello-world/target/spring-boot-hello-world-1.0.jar --server.port=8081 &'
+		sh 'cd spring-boot-hello-word/target && nohup java -jar spring-boot-hello-world-1.0.jar --server.port=8081 &'
 	  }
 	}
   }
