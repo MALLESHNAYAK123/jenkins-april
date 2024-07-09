@@ -10,7 +10,7 @@ pipeline{
 	stage('build stage-01'){
 	  steps{
 		script{
-			dir('spring-boot-hello-world'){
+			dir('web-thymeleaf'){
 				sh 'pwd'
 				sh 'mvn clean package'
 			}
